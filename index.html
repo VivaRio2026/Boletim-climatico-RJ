@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Boletim de risco climático · Rio</title>
+<style>
+:root{--bg:#f4f6fa;--card:#fff;--tx:#14213d;--mut:#5b6785;--bd:#d9deea}
+@media (prefers-color-scheme:dark){:root{--bg:#0a0f24;--card:#141b38;--tx:#eef1fa;--mut:#9aa6c9;--bd:#2a3460}}
+body{margin:0;background:var(--bg);color:var(--tx);font:16px/1.5 system-ui,sans-serif}
+main{max-width:760px;margin:0 auto;padding:16px}
+.card{background:var(--card);border:1px solid var(--bd);border-radius:12px;padding:16px;margin-bottom:16px;overflow-x:auto}
+h1{font-size:1.4rem;margin:8px 0}h2{font-size:1.05rem;margin:0 0 10px}
+table{width:100%;border-collapse:collapse;font-size:.9rem}
+th,td{padding:6px 8px;text-align:right;border-top:1px solid var(--bd)}th:first-child,td:first-child{text-align:left}
+th{color:var(--mut);font-weight:600;border-top:0}
+.mut{color:var(--mut);font-size:.85rem}a{color:inherit}
+li{margin:6px 0}
+</style>
+</head>
+<body><main>
+<h1>Boletim de risco climático · Rio de Janeiro</h1>
+<p class="mut" id="upd">Carregando…</p>
+
+<div class="card"><h2>Previsão automática (Open-Meteo)</h2>
+<table><thead><tr><th>Dia</th><th>Máx. °C</th><th>Sensação °C</th><th>Chuva mm</th><th>Prob. %</th><th>Rajada km/h</th></tr></thead>
+<tbody id="tb"></tbody></table></div>
+
+<div class="card"><h2>Fontes de consulta manual</h2>
+<ul id="links"></ul>
+<p class="mut">Cole abaixo, no arquivo index.html, o endereço de cada painel (variável LINKS).</p></div>
+</main>
+<script>
+const LINKS=[
+ ["Painel de excesso de calor do Estado do RJ (Monitora RJ / cisshiny)",""],
+ ["Painel Nacional de Excesso de Calor (Ministério da Saúde)",""],
+ ["CIEVS",""],["VigiAR",""],["GeoRisk",""]];
+document.getElementById("links").innerHTML=LINKS.map(l=>`<li>${l[1]?`<a href="${l[1]}" target="_blank" rel="noopener">${l[0]}</a>`:l[0]}</li>`).join("");
+const f=n=>n==null?"—":Math.round(n*10)/10;
+fetch("data/dados.json?"+Date.now()).then(r=>r.json()).then(d=>{
+ document.getElementById("upd").textContent="Atualizado em "+d.atualizado_em+" (horário de Brasília)";
+ document.getElementById("tb").innerHTML=d.dias.map(x=>{
+  const [a,m,dd]=x.data.split("-");
+  return `<tr><td>${dd}/${m}</td><td>${f(x.temp_max)}</td><td>${f(x.sensacao_max)}</td><td>${f(x.chuva_mm)}</td><td>${f(x.chuva_prob)}</td><td>${f(x.rajada_kmh)}</td></tr>`}).join("");
+}).catch(()=>{document.getElementById("upd").textContent="Não foi possível carregar os dados."});
+</script>
+</body></html>
