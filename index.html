@@ -33,7 +33,7 @@ li{margin:6px 0}
 <script>
 const LINKS=[
  ["Painel de excesso de calor do Estado do RJ (Monitora RJ / cisshiny)",""],
- ["Painel Nacional de Excesso de Calor (Ministério da Saúde)",""],
+ ["Painel Nacional de Excesso de Calor (Ministério da Saúde)","https://clima.saude.gov.br/rj?data=2026-10-28&modo=ehf"],
  ["CIEVS",""],["VigiAR",""],["GeoRisk",""]];
 document.getElementById("links").innerHTML=LINKS.map(l=>`<li>${l[1]?`<a href="${l[1]}" target="_blank" rel="noopener">${l[0]}</a>`:l[0]}</li>`).join("");
 const f=n=>n==null?"—":Math.round(n*10)/10;
