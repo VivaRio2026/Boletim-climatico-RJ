@@ -222,5 +222,13 @@
   "chuva_mm": 9.8,
   "chuva_prob": 90,
   "rajada_kmh": 47.5
+ },
+ {
+  "data": "2026-11-26",
+  "temp_max": 25.0,
+  "sensacao_max": 30.9,
+  "chuva_mm": 27.2,
+  "chuva_prob": 100,
+  "rajada_kmh": 69.5
  }
 ]
