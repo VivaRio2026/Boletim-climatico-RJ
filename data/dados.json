@@ -1,54 +1,54 @@
 {
- "atualizado_em": "2026-11-26 06:53",
+ "atualizado_em": "2026-11-27 06:51",
  "fonte": "Open-Meteo",
  "dias": [
   {
-   "data": "2026-11-26",
-   "temp_max": 25.0,
-   "sensacao_max": 30.9,
-   "chuva_mm": 27.2,
-   "chuva_prob": 100,
-   "rajada_kmh": 69.5
-  },
-  {
    "data": "2026-11-27",
-   "temp_max": 24.6,
-   "sensacao_max": 25.0,
-   "chuva_mm": 0.3,
-   "chuva_prob": 59,
-   "rajada_kmh": 47.2
+   "temp_max": 25.6,
+   "sensacao_max": 26.9,
+   "chuva_mm": 1.4,
+   "chuva_prob": 94,
+   "rajada_kmh": 52.2
   },
   {
    "data": "2026-11-28",
-   "temp_max": 27.8,
-   "sensacao_max": 31.9,
-   "chuva_mm": 14.0,
-   "chuva_prob": 51,
-   "rajada_kmh": 36.7
+   "temp_max": 26.2,
+   "sensacao_max": 30.0,
+   "chuva_mm": 2.1,
+   "chuva_prob": 66,
+   "rajada_kmh": 50.4
   },
   {
    "data": "2026-11-29",
-   "temp_max": 28.0,
-   "sensacao_max": 33.9,
-   "chuva_mm": 5.2,
-   "chuva_prob": 92,
-   "rajada_kmh": 43.6
+   "temp_max": 26.6,
+   "sensacao_max": 31.9,
+   "chuva_mm": 40.4,
+   "chuva_prob": 98,
+   "rajada_kmh": 39.6
   },
   {
    "data": "2026-11-30",
-   "temp_max": 25.2,
-   "sensacao_max": 29.2,
-   "chuva_mm": 4.7,
-   "chuva_prob": 80,
-   "rajada_kmh": 33.5
+   "temp_max": 25.0,
+   "sensacao_max": 28.6,
+   "chuva_mm": 14.9,
+   "chuva_prob": 87,
+   "rajada_kmh": 42.1
   },
   {
    "data": "2026-12-01",
-   "temp_max": 26.1,
-   "sensacao_max": 29.6,
-   "chuva_mm": 1.2,
-   "chuva_prob": 59,
-   "rajada_kmh": 43.9
+   "temp_max": 26.4,
+   "sensacao_max": 31.1,
+   "chuva_mm": 1.3,
+   "chuva_prob": 68,
+   "rajada_kmh": 48.2
+  },
+  {
+   "data": "2026-12-02",
+   "temp_max": 29.0,
+   "sensacao_max": 35.7,
+   "chuva_mm": 4.5,
+   "chuva_prob": 41,
+   "rajada_kmh": 34.9
   }
  ]
 }
